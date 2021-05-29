@@ -10,8 +10,8 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 public class WeatherRepository {
     private SessionFactory sessionFactory;
 
-    public WeatherRepository(){
-        StandardServiceRegistry  registry = new StandardServiceRegistryBuilder()
+    public WeatherRepository() {
+        StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
                 .configure()
                 .build();
         sessionFactory = new MetadataSources(registry)
@@ -19,7 +19,8 @@ public class WeatherRepository {
                 .buildSessionFactory();
 
     }
-    public Weather save (Weather weather){
+
+    public Weather save(Weather weather) {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
 

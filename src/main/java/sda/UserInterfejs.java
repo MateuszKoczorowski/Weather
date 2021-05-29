@@ -5,12 +5,11 @@ import java.util.Scanner;
 public class UserInterfejs {
 
 
-
-    public void run (){
+    public void run() {
         System.out.println("Witaj w naszej aplikacji pogodowej;");
         Scanner scaner = new Scanner(System.in);
 
-        while (true){
+        while (true) {
             System.out.println("Zaczynajmy");
             System.out.println("1) Wyświetl aktualnanie dodane lokalizacje pogodowe : ");
             System.out.println("2) Wyświetl aktualną pogode : ");
@@ -19,16 +18,16 @@ public class UserInterfejs {
             int respown = scaner.nextInt();
 
             switch (respown) {
-                case 1 :
+                case 1:
                     System.out.println("nie masz żadnych lokacji ");
                     break;
-                case 2 :
+                case 2:
                     System.out.println("nie masz żadnych lokacji");
                     break;
-                case 3 :
+                case 3:
                     addLocation();
-                   break;
-                case 0 :
+                    break;
+                case 0:
                     return;
 
             }

@@ -22,7 +22,7 @@ public class Weather {
     @JsonIgnore
     private Instant createDate;
 
-    public Weather(){
+    public Weather() {
     }
 
     public Weather(Long id, String nameLocation, double x, double y, String region, String country) {
@@ -91,6 +91,9 @@ public class Weather {
     public void setCountry(String country) {
         this.country = country;
     }
-    public void  setCreateDate(Instant createDate){this.createDate = createDate;}
+
+    public void setCreateDate(Instant createDate) {
+        this.createDate = createDate;
+    }
 }
 
