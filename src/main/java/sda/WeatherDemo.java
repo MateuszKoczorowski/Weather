@@ -17,9 +17,15 @@ public class WeatherDemo {
                 .buildSessionFactory();
 
         LocationRepositoryImpi locationRepositoryImpl = new LocationRepositoryImpi(sessionFactory);
+        ForecastRepositoryImpl forecastRepositoryImpl = new ForecastRepositoryImpl(sessionFactory);
+
         LocationService locationService = new LocationService(locationRepositoryImpl);
+        ForecastService forecastService = new ForecastService(forecastRepositoryImpl, locationRepositoryImpl);
+
         LocationController locationController = new LocationController(locationService);
-        UserInterface userInterface = new UserInterface(locationController);
+        ForecastController forecastController = new ForecastController(forecastService);
+
+        UserInterface userInterface = new UserInterface(locationController, forecastController);
         userInterface.run();
     }
 }

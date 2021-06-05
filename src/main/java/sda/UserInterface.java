@@ -3,10 +3,14 @@ package sda;
 import java.util.Scanner;
 
 public class UserInterface {
+
     private  final  LocationController locationController;
-    public UserInterface(LocationController locationController)
+    private  final  ForecastController forecastController;
+    public UserInterface(LocationController locationController,ForecastController forecastController)
     {
         this.locationController = locationController;
+        this.forecastController = forecastController;
+
     }
 
     public void run() {
