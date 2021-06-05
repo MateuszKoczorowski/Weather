@@ -6,6 +6,7 @@
         <property name="connection.username">root</property>
         <property name="connection.password">Mk123456.</property>
         <property name="hbm2ddl.auto">update</property>
-        <mapping class="com.weather.Location"/>
+        <mapping class="com.weather.location.Location"/>
+        <mapping class="com.weather.forecast.Forecast"/>
     </session-factory>
 </hibernate-configuration>
